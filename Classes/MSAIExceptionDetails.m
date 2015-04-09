@@ -50,13 +50,13 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super init];
   if(self) {
-    self.exceptionDetailsId = [coder decodeObjectForKey:@"self.exceptionDetailsId"];
-    self.outerId = [coder decodeObjectForKey:@"self.outerId"];
-    self.typeName = [coder decodeObjectForKey:@"self.typeName"];
-    self.message = [coder decodeObjectForKey:@"self.message"];
-    self.hasFullStack = [coder decodeBoolForKey:@"self.hasFullStack"];
-    self.stack = [coder decodeObjectForKey:@"self.stack"];
-    self.parsedStack = [coder decodeObjectForKey:@"self.parsedStack"];
+    _exceptionDetailsId = [coder decodeObjectForKey:@"self.exceptionDetailsId"];
+    _outerId = [coder decodeObjectForKey:@"self.outerId"];
+    _typeName = [coder decodeObjectForKey:@"self.typeName"];
+    _message = [coder decodeObjectForKey:@"self.message"];
+    _hasFullStack = [coder decodeBoolForKey:@"self.hasFullStack"];
+    _stack = [coder decodeObjectForKey:@"self.stack"];
+    _parsedStack = [coder decodeObjectForKey:@"self.parsedStack"];
   }
 
   return self;

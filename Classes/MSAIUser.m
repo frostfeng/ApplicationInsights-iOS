@@ -2,13 +2,6 @@
 /// Data contract class for type User.
 @implementation MSAIUser
 
-/// Initializes a new instance of the class.
-- (instancetype)init {
-    if (self = [super init]) {
-    }
-    return self;
-}
-
 ///
 /// Adds all members of this class to a dictionary
 /// @param dictionary to which the members of this class will be added.
@@ -35,10 +28,10 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super initWithCoder:coder];
   if(self) {
-    self.accountAcquisitionDate = [coder decodeObjectForKey:@"self.accountAcquisitionDate"];
-    self.accountId = [coder decodeObjectForKey:@"self.accountId"];
-    self.userAgent = [coder decodeObjectForKey:@"self.userAgent"];
-    self.userId = [coder decodeObjectForKey:@"self.userId"];
+    _accountAcquisitionDate = [coder decodeObjectForKey:@"self.accountAcquisitionDate"];
+    _accountId = [coder decodeObjectForKey:@"self.accountId"];
+    _userAgent = [coder decodeObjectForKey:@"self.userAgent"];
+    _userId = [coder decodeObjectForKey:@"self.userId"];
   }
 
   return self;

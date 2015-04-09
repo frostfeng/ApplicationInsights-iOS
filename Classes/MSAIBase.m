@@ -26,7 +26,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super initWithCoder:coder];
   if(self) {
-    self.baseType = [coder decodeObjectForKey:@"self.baseType"];
+    _baseType = [coder decodeObjectForKey:@"self.baseType"];
   }
 
   return self;

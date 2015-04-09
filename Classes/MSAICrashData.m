@@ -3,15 +3,16 @@
 @implementation MSAICrashData
 @synthesize envelopeTypeName = _envelopeTypeName;
 @synthesize dataTypeName = _dataTypeName;
+@synthesize version = _version;
 
 /// Initializes a new instance of the class.
 - (instancetype)init {
   if (self = [super init]) {
     _envelopeTypeName = @"Microsoft.ApplicationInsights.Crash";
     _dataTypeName = @"CrashData";
-    self.version = [NSNumber numberWithInt:2];
-    self.threads = [NSMutableArray new];
-    self.binaries = [NSMutableArray new];
+    _version = [NSNumber numberWithInt:2];
+    _threads = [NSMutableArray new];
+    _binaries = [NSMutableArray new];
   }
   return self;
 }
@@ -46,9 +47,9 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super initWithCoder:coder];
   if(self) {
-    self.headers = [coder decodeObjectForKey:@"self.headers"];
-    self.threads = [coder decodeObjectForKey:@"self.threads"];
-    self.binaries = [coder decodeObjectForKey:@"self.binaries"];
+    _headers = [coder decodeObjectForKey:@"self.headers"];
+    _threads = [coder decodeObjectForKey:@"self.threads"];
+    _binaries = [coder decodeObjectForKey:@"self.binaries"];
   }
   
   return self;

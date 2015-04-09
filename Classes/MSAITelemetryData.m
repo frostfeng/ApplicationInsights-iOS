@@ -16,9 +16,9 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super initWithCoder:coder];
   if(self) {
-    self.version = [coder decodeObjectForKey:@"self.version"];
-    self.name = [coder decodeObjectForKey:@"self.name"];
-    self.properties = [coder decodeObjectForKey:@"self.properties"];
+    _version = [coder decodeObjectForKey:@"self.version"];
+    _name = [coder decodeObjectForKey:@"self.name"];
+    _properties = [coder decodeObjectForKey:@"self.properties"];
   }
 
   return self;

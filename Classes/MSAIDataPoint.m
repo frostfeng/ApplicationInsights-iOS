@@ -44,13 +44,13 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [self init];
   if(self) {
-    self.name = [coder decodeObjectForKey:@"self.name"];
-    self.kind = (MSAIDataPointType) [coder decodeIntForKey:@"self.kind"];
-    self.value = [coder decodeObjectForKey:@"self.value"];
-    self.count = [coder decodeObjectForKey:@"self.count"];
-    self.min = [coder decodeObjectForKey:@"self.min"];
-    self.max = [coder decodeObjectForKey:@"self.max"];
-    self.stdDev = [coder decodeObjectForKey:@"self.stdDev"];
+    _name = [coder decodeObjectForKey:@"self.name"];
+    _kind = (MSAIDataPointType) [coder decodeIntForKey:@"self.kind"];
+    _value = [coder decodeObjectForKey:@"self.value"];
+    _count = [coder decodeObjectForKey:@"self.count"];
+    _min = [coder decodeObjectForKey:@"self.min"];
+    _max = [coder decodeObjectForKey:@"self.max"];
+    _stdDev = [coder decodeObjectForKey:@"self.stdDev"];
   }
 
   return self;

@@ -38,8 +38,8 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super initWithCoder:coder];
   if(self) {
-    self.message = [coder decodeObjectForKey:@"self.message"];
-    self.severityLevel = (MSAISeverityLevel) [coder decodeIntForKey:@"self.severityLevel"];
+    _message = [coder decodeObjectForKey:@"self.message"];
+    _severityLevel = (MSAISeverityLevel) [coder decodeIntForKey:@"self.severityLevel"];
   }
 
   return self;

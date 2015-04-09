@@ -41,7 +41,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super initWithCoder:coder];
   if(self) {
-    self.metrics = [coder decodeObjectForKey:@"self.metrics"];
+    _metrics = [coder decodeObjectForKey:@"self.metrics"];
   }
 
   return self;

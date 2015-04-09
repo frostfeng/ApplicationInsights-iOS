@@ -2,13 +2,6 @@
 /// Data contract class for type Operation.
 @implementation MSAIOperation
 
-/// Initializes a new instance of the class.
-- (instancetype)init {
-    if (self = [super init]) {
-    }
-    return self;
-}
-
 ///
 /// Adds all members of this class to a dictionary
 /// @param dictionary to which the members of this class will be added.
@@ -35,10 +28,10 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super initWithCoder:coder];
   if(self) {
-    self.operationId = [coder decodeObjectForKey:@"self.operationId"];
-    self.name = [coder decodeObjectForKey:@"self.name"];
-    self.parentId = [coder decodeObjectForKey:@"self.parentId"];
-    self.rootId = [coder decodeObjectForKey:@"self.rootId"];
+    _operationId = [coder decodeObjectForKey:@"self.operationId"];
+    _name = [coder decodeObjectForKey:@"self.name"];
+    _parentId = [coder decodeObjectForKey:@"self.parentId"];
+    _rootId = [coder decodeObjectForKey:@"self.rootId"];
   }
 
   return self;

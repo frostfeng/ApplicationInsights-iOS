@@ -26,7 +26,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super init];
   if(self) {
-    self.version = [coder decodeObjectForKey:@"self.version"];
+    _version = [coder decodeObjectForKey:@"self.version"];
   }
 
   return self;
