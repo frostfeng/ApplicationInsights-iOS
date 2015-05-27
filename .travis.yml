@@ -13,6 +13,7 @@ script:
 - cd Support
 - xcrun simctl list
 - find /Library/Developer/CoreSimulator -name dyld_sim -exec ls -al {} \;
+- sudo chgrp wheel /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 8.2.simruntime/Contents/Resources/RuntimeRoot/usr/lib/dyld_sim
 - xcodebuild -project ApplicationInsights.xcodeproj -scheme "ApplicationInsights" -sdk iphonesimulator -configuration Debug -destination "platform=iOS Simulator,name=iPhone 6" test | xcpretty -c
 - xcodebuild -project ApplicationInsights.xcodeproj -scheme "ApplicationInsights Framework" -sdk iphonesimulator -configuration Release | xcpretty -c
 - cd ..
