@@ -11,6 +11,7 @@ notifications:
 script:
 - set -o pipefail
 - cd Support
+- xcrun simctl list
 - xcodebuild -project ApplicationInsights.xcodeproj -scheme "ApplicationInsights" -sdk iphonesimulator -configuration Debug -destination "platform=iOS Simulator,name=iPhone 6" test | xcpretty -c
 - xcodebuild -project ApplicationInsights.xcodeproj -scheme "ApplicationInsights Framework" -sdk iphonesimulator -configuration Release | xcpretty -c
 - cd ..
